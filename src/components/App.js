@@ -6,6 +6,7 @@ import unsplash from "../api/unsplash";
 
 // importing Components
 import SearchBar from "./SearchBar";
+import ImageList from "./ImageList";
 
 class App extends React.Component {
   //initializing state
@@ -27,7 +28,7 @@ class App extends React.Component {
       <div className="ui container">
         {/* Here, the onSubmit is a user defined prop and passes the callback method to child compnent  */}
         <SearchBar onSubmit={this.onSearchSubmit} />
-        Fetched: {this.state.images.length} results
+        <ImageList images={this.state.images}/>
       </div>
     );
   }
